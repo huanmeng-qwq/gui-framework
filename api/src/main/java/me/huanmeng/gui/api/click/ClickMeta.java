@@ -5,6 +5,7 @@ import me.huanmeng.gui.api.area.GuiArea;
 import me.huanmeng.gui.api.click.type.ClickType;
 import me.huanmeng.gui.api.component.Component;
 import me.huanmeng.gui.api.inventory.Inventory;
+import me.huanmeng.gui.api.pool.InventoryPool;
 import me.huanmeng.gui.api.slot.Slot;
 import org.bukkit.entity.Player;
 import org.checkerframework.checker.nullness.qual.NonNull;
@@ -18,6 +19,7 @@ import org.checkerframework.checker.nullness.qual.NonNull;
 public interface ClickMeta<T> {
     ClickMeta<Boolean> CANCELED = ClickMeta.of(Boolean.class, true);
 
+    ClickMeta<InventoryPool> INVENTORY_POOL = ClickMeta.of(InventoryPool.class);
     ClickMeta<Inventory> INVENTORY = ClickMeta.of(Inventory.class);
     ClickMeta<Gui> GUI = ClickMeta.of(Gui.class);
     ClickMeta<GuiArea> GUI_AREA = ClickMeta.of(GuiArea.class);

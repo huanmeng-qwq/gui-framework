@@ -24,4 +24,6 @@ public interface Inventory {
     Component title();
 
     void title(@NonNull Component title);
+
+    int id();
 }
