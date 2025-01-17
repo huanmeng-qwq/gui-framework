@@ -24,6 +24,7 @@ public interface ClickMeta<T> {
     ClickMeta<Gui> GUI = ClickMeta.of(Gui.class);
     ClickMeta<GuiArea> GUI_AREA = ClickMeta.of(GuiArea.class);
     ClickMeta<Player> PLAYER = ClickMeta.of(Player.class);
+    ClickMeta<Integer> CLICK_MODE = ClickMeta.of(Integer.class);
     ClickMeta<ClickType> CLICK_TYPE = ClickMeta.of(ClickType.class);
     ClickMeta<Component> COMPONENT = ClickMeta.of(Component.class);
     ClickMeta<Slot> SLOT = ClickMeta.of(Slot.class);
