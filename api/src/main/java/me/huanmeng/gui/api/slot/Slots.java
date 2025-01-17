@@ -7,4 +7,5 @@ package me.huanmeng.gui.api.slot;
  * @author huanmeng_qwq
  */
 public interface Slots {
+    Slots[] slots();
 }
