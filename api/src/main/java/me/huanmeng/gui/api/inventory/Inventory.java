@@ -15,6 +15,8 @@ public interface Inventory {
     @NonNull
     InventoryType type();
 
+    ItemStack[] items();
+
     @Nullable
     ItemStack getItem(int slot);
 
@@ -28,4 +30,8 @@ public interface Inventory {
     int id();
 
     void closeAll();
+
+    void clear();
+
+    void update();
 }
