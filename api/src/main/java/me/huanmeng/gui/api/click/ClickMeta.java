@@ -37,6 +37,10 @@ public interface ClickMeta<T> {
 
     boolean mutable();
 
+    static <T> ClickMeta<T> mutable(@NonNull Class<T> metaClass) {
+        return of(metaClass, true);
+    }
+
     static <T> ClickMeta<T> of(@NonNull Class<T> metaClass) {
         return of(metaClass, false);
     }
