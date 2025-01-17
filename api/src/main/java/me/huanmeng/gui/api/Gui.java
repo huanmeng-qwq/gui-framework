@@ -19,6 +19,8 @@ public interface Gui {
 
     InventoryType type();
 
+    void addArea(GuiArea area);
+
     List<GuiArea> areas();
 
     void open(Player player);

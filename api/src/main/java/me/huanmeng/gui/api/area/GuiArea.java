@@ -1,5 +1,6 @@
 package me.huanmeng.gui.api.area;
 
+import me.huanmeng.gui.api.Gui;
 import me.huanmeng.gui.api.draw.GuiDraw;
 
 /**
@@ -11,5 +12,5 @@ import me.huanmeng.gui.api.draw.GuiDraw;
 public interface GuiArea {
     GuiDraw draw();
 
-    void refresh();
+    void refresh(Gui gui);
 }
