@@ -24,5 +24,7 @@ public interface PreparedButton {
 
     PreparedButton addClick(Consumer<ClickRequest> consumer);
 
+    PreparedButton cancelClick();
+
     Button build();
 }
