@@ -2,11 +2,11 @@ package me.huanmeng.gui.api.click;
 
 import me.huanmeng.gui.api.Gui;
 import me.huanmeng.gui.api.area.GuiArea;
+import me.huanmeng.gui.api.click.type.ClickType;
 import me.huanmeng.gui.api.component.Component;
 import me.huanmeng.gui.api.inventory.InventoryType;
 import me.huanmeng.gui.api.slot.Slot;
 import org.bukkit.entity.Player;
-import org.bukkit.event.inventory.ClickType;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 /**
