@@ -1,5 +1,8 @@
 package me.huanmeng.gui.api.click;
 
+import org.checkerframework.checker.nullness.qual.NonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
+
 /**
  * 2025/1/17<br>
  * gui-framework<br>
@@ -7,9 +10,10 @@ package me.huanmeng.gui.api.click;
  * @author huanmeng_qwq
  */
 public interface ClickRequest {
-    <T> T meta(ClickMeta<T> clickMeta);
+    @Nullable
+    <T> T meta(@NonNull ClickMeta<T> clickMeta);
 
-    <T> void setMeta(ClickMeta<T> meta, T value);
+    <T> void setMeta(@NonNull ClickMeta<T> meta, T value);
 
-    boolean containMeta(ClickMeta<?> meta);
+    boolean containMeta(@NonNull ClickMeta<?> meta);
 }
