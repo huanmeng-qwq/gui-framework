@@ -26,4 +26,6 @@ public interface Inventory {
     void title(@NonNull Component title);
 
     int id();
+
+    void closeAll();
 }
