@@ -1,5 +1,5 @@
 dependencies {
-    compileOnlyApi("org.checkerframework:checker-qual:3.12.0")
+    compileOnlyApi("org.jetbrains:annotations:26.0.0")
 
     compileOnlyApi("net.kyori:adventure-api:4.14.0")
     compileOnlyApi("net.kyori:adventure-platform-bukkit:4.3.1")

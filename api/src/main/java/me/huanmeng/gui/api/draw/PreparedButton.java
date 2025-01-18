@@ -1,7 +1,7 @@
 package me.huanmeng.gui.api.draw;
 
 import me.huanmeng.gui.api.click.ClickRequest;
-import me.huanmeng.gui.api.component.Button;
+import me.huanmeng.gui.api.component.button.GUIButton;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
@@ -26,5 +26,5 @@ public interface PreparedButton {
 
     PreparedButton cancelClick();
 
-    Button build();
+    GUIButton build();
 }

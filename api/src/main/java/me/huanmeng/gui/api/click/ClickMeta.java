@@ -1,14 +1,12 @@
 package me.huanmeng.gui.api.click;
 
-import me.huanmeng.gui.api.Gui;
-import me.huanmeng.gui.api.area.GuiArea;
+import me.huanmeng.gui.api.component.frame.GUIFrame;
 import me.huanmeng.gui.api.click.type.ClickType;
 import me.huanmeng.gui.api.component.Component;
-import me.huanmeng.gui.api.inventory.Inventory;
 import me.huanmeng.gui.api.pool.InventoryPool;
-import me.huanmeng.gui.api.slot.Slot;
+import me.huanmeng.gui.api.slot.GUISlot;
 import org.bukkit.entity.Player;
-import org.checkerframework.checker.nullness.qual.NonNull;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * 2025/1/17<br>
@@ -20,36 +18,36 @@ public interface ClickMeta<T> {
     ClickMeta<Boolean> CANCELED = ClickMeta.of(Boolean.class, true);
 
     ClickMeta<InventoryPool> INVENTORY_POOL = ClickMeta.of(InventoryPool.class);
-    ClickMeta<Inventory> INVENTORY = ClickMeta.of(Inventory.class);
-    ClickMeta<Gui> GUI = ClickMeta.of(Gui.class);
-    ClickMeta<GuiArea> GUI_AREA = ClickMeta.of(GuiArea.class);
+    ClickMeta<ContentHolder> INVENTORY = ClickMeta.of(ContentHolder.class);
+    ClickMeta<me.huanmeng.gui.api.GUI> GUI = ClickMeta.of(me.huanmeng.gui.api.GUI.class);
+    ClickMeta<GUIFrame> GUI_AREA = ClickMeta.of(GUIFrame.class);
     ClickMeta<Player> PLAYER = ClickMeta.of(Player.class);
     ClickMeta<Integer> CLICK_MODE = ClickMeta.of(Integer.class);
     ClickMeta<ClickType> CLICK_TYPE = ClickMeta.of(ClickType.class);
     ClickMeta<Component> COMPONENT = ClickMeta.of(Component.class);
-    ClickMeta<Slot> SLOT = ClickMeta.of(Slot.class);
+    ClickMeta<GUISlot> SLOT = ClickMeta.of(GUISlot.class);
     ClickMeta<Integer> SLOT_NUM = ClickMeta.of(Integer.class);
     ClickMeta<Integer> HOT_BAR = ClickMeta.of(Integer.class);
 
 
-    @NonNull
+    @NotNull
     Class<T> metaClass();
 
     boolean mutable();
 
-    static <T> ClickMeta<T> mutable(@NonNull Class<T> metaClass) {
+    static <T> ClickMeta<T> mutable(@NotNull Class<T> metaClass) {
         return of(metaClass, true);
     }
 
-    static <T> ClickMeta<T> of(@NonNull Class<T> metaClass) {
+    static <T> ClickMeta<T> of(@NotNull Class<T> metaClass) {
         return of(metaClass, false);
     }
 
-    @NonNull
-    static <T> ClickMeta<T> of(@NonNull Class<T> metaClass, boolean mutable) {
+    @NotNull
+    static <T> ClickMeta<T> of(@NotNull Class<T> metaClass, boolean mutable) {
         return new ClickMeta<T>() {
             @Override
-            public @NonNull Class<T> metaClass() {
+            public @NotNull Class<T> metaClass() {
                 return metaClass;
             }
 

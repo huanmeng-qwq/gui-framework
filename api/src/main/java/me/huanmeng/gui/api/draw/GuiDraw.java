@@ -1,6 +1,6 @@
 package me.huanmeng.gui.api.draw;
 
-import me.huanmeng.gui.api.slot.Slot;
+import me.huanmeng.gui.api.slot.GUISlot;
 
 import java.util.function.Consumer;
 
@@ -11,7 +11,7 @@ import java.util.function.Consumer;
  * @author huanmeng_qwq
  */
 public interface GuiDraw {
-    GuiDraw button(Slot slot, Consumer<PreparedButton> consumer);
+    GuiDraw button(GUISlot GUISlot, Consumer<PreparedButton> consumer);
 
     void commit();
 }
